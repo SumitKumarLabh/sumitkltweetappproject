@@ -1,0 +1,8 @@
+<div class="header" *ngIf="this._userservice.getIsLoggedIn()" style="background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)); opacity: 0.8; ">
+    <a class="nav-link text-white" href="home" style="margin-left: 10px"><strong>Tweet App</strong></a>
+    <div class="header-right" style="margin-top:10px;">
+        <a class="nav-link text-white" href="home"><strong>Welcome {{ username }}</strong></a>
+        <a class="nav-link text-white" href="home"><strong>Home</strong></a>
+        <a class="nav-link text-white" (click)="onLogout()" href="home"><strong>Logout</strong></a>
+    </div>
+</div>

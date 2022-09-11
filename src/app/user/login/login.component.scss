@@ -1,0 +1,100 @@
+.img-fluid{
+    width: 800px;
+    height: 550px;
+}
+
+* {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,0.6);
+    font-family: sans-serif;
+   // background-image: linear-gradient(rgba(0,0,0,0.88),rgba(0,0,0,0.88)),url(../images/LoginBack.jpg);
+    background-size: cover;
+}
+
+.box {
+    height: auto;
+    width: 600px;
+    position: center;
+    margin: 2% auto;
+    border-radius: 50px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px 50px 50px 50px;
+    overflow: hidden;
+}
+
+    .box h1 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .box input[type = "number"], .box input[type = "text"], .box input[type = "password"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 450px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+    }
+    ::placeholder
+    {
+        color: white;
+    }
+
+        .box input[type = "number"]:focus, .box input[type = "text"]:focus, .box input[type = "password"]:focus {
+            width: 500px;
+            border-color: #2ecc71;
+            color: white;
+        }
+
+    .box button[type = "submit"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: auto;
+        text-align: center;
+        border: 2px solid green;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .box input[type = "submit"]:hover {
+        background: #2ecc71;
+    }
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adlogo {
+    width: 80px;
+    margin-top: 0;
+    margin-left: 42%;
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+}

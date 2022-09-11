@@ -1,0 +1,37 @@
+<div class="card mb-3" style="max-width: 99%; background-color: grey;">
+  <div class="row g-0" style="background-color: grey;">
+    <div class="card-body"style="background-color: grey;">
+      <input style="background-color: grey;" matInput type="text" class="col-sm-12 form-control mt-2 " placeholder="Search By Name" #searchName />
+      <button (click)="search(searchName.value)" [disabled]="!searchName.value"
+        class="btn col-sm-12 mt-2" style="background-color: rgb(32, 131, 237); color: white;">
+        Search <i class="bi bi-search"></i>
+      </button>
+      <mat-progress-bar *ngIf="displayLoading" class="mt-3" mode="indeterminate"></mat-progress-bar>
+    </div>
+  </div>
+  <div *ngIf="true" class="img-thumbnail mt-2" style="background-color: grey; height: 460px; overflow-y: auto">
+    <div>
+      <div *ngIf="users.length == 0" class="card-body">
+        <p style="text-align: center; color: white;">
+          No User Found !!
+        </p>
+      </div>
+
+      <div *ngFor="let user of users" class="card mb-3 mt-1" style="max-width: 99%; background-color: grey;">
+        <div class="row g-0">
+          <div class="col-md-2">
+            <img  class="rounded-circle img-thumbnail custmSize" alt="profilePic"
+              style="box-sizing: border-box" src=".\assets\boy-image.jfif" data-holder-rendered="true" />
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <p class="card-text"  style="color: white;">Name : <strong>{{user.firstName}} {{user.lastName}}</strong></p>
+              <p class="card-text"  style="color: white;">User Name : <strong>{{user.userName}}</strong> </p>
+              <p class="card-text"  style="color: white;">Mobile Number : <strong>{{user.phoneNumber}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

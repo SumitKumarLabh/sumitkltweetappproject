@@ -1,0 +1,32 @@
+<body>
+  <div><br><br></div>
+  <div class="bodies">
+    <div class="colm-form">
+      <br>
+      <div class="box">
+        <form (submit)="submit()" [formGroup]="loginForm">
+          <input
+            type="text"
+            class = "input"
+            formControlName="userName"
+            placeholder="Username"
+          /><br>
+          <input
+            type="password"
+            class = "input"
+            formControlName="password"
+            placeholder="Password"
+          />
+          <br>
+          <mat-progress-bar *ngIf="displayLoading" class="mt-3" mode="indeterminate"></mat-progress-bar>
+          <br>
+          <button type="submit" value="Login">Login</button><br>
+          <a style="color: white; margin-left: 38%; text-decoration: none;" routerLink="/forgetpassword">Forgot password?</a><br>
+          <a style="color: white; margin-left: 37%; text-decoration: none;" routerLink="/">Back to Home Page</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+</body>
+

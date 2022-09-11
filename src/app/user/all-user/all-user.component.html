@@ -1,0 +1,19 @@
+<div *ngIf="users.length == 0">
+  <mat-spinner style="margin-left: 40%"></mat-spinner>
+</div>
+
+<div *ngFor="let user of users" class="card mb-3" style="max-width: 99%; background-color: grey;">
+  <div class="row g-0">
+    <div class="col-md-2">
+      <img  class="rounded-circle img-thumbnail custmSize" alt="profilePic"
+        style="box-sizing: border-box" src=".\assets\boy-image.jfif" data-holder-rendered="true" />
+    </div>
+    <div class="col-md-10">
+      <div class="card-body">
+        <p class="card-text" style="color: white;">Name : <strong>{{user.firstName}} {{user.lastName}}</strong></p>
+        <p class="card-text"  style="color: white;">User Name : <strong>{{user.userName}}</strong></p>
+        <p class="card-text"  style="color: white;">Phone Number: <strong>{{user.phoneNumber}}</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
