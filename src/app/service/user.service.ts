@@ -37,7 +37,7 @@ export class UserService {
 
   login(userName: string, password: string):Observable<any> {
     const body = { username: userName, password: password };
-    return this._http.post('http://20.124.163.127/api/v1.0/tweets/login',body);
+    return this._http.post('https://demoappsumit.azurewebsites.net/api/v1.0/tweets/login',body);
   }
 
   register(
@@ -52,7 +52,7 @@ export class UserService {
          });
       let options = { headers: headers };  
     const body = { userName: username, firstName: firstName , lastName: lastName,  phoneNumber: phoneNumber,password: password };
-    return this._http.post('http://20.124.163.127/api/v1.0/tweets/register',body,options);
+    return this._http.post('https://demoappsumit.azurewebsites.net/api/v1.0/tweets/register',body,options);
   }
 
   forgotPassword(
@@ -61,7 +61,7 @@ export class UserService {
     ):Observable<any> {
       let queries = new HttpParams().set('userName', userName).set('contactNumber',phoneNumber);
   
-    return this._http.get('http://20.124.163.127/api/v1.0/tweets/'+userName+'/Forgot',{params:queries});
+    return this._http.get('https://demoappsumit.azurewebsites.net/api/v1.0/tweets/'+userName+'/Forgot',{params:queries});
   }
 
   allUser():Observable<any> {
@@ -70,7 +70,7 @@ export class UserService {
       'Authorization': 'Bearer ' + localStorage.getItem('JwtToken') || 'error' });
     let options = { headers: headers }; 
     return this._http.get(
-      'http://20.124.163.127/api/v1.0/tweets/users/all', options);
+      'https://demoappsumit.azurewebsites.net/api/v1.0/tweets/users/all', options);
   }
 
   searchUser(name:string):Observable<any> {
@@ -80,6 +80,6 @@ export class UserService {
     let queries = new HttpParams().set('username', name);
     let options = { headers: headers};
     return this._http.get(
-      'http://20.124.163.127/api/v1.0/tweets/user/search/'+name, options);
+      'https://demoappsumit.azurewebsites.net/api/v1.0/tweets/user/search/'+name, options);
   }
 }
