@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
-})
+}) 
 export class TweetService {
 
   constructor(private _http: HttpClient) { }
@@ -15,6 +15,7 @@ export class TweetService {
       'Authorization': 'Bearer '+ localStorage.getItem('JwtToken') || 'error' });
 
     let userName = localStorage.getItem('userName');
+    let texts = "";
     let options = { headers: headers }; 
     const body = { message: message };
     return this._http.post('http://20.124.163.127/api/v1.0/tweets/'+userName+'/add',body, options);

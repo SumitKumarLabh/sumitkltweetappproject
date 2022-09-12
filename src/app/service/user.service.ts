@@ -17,7 +17,7 @@ export class UserService {
   getIsLoggedIn(){
     return this.IsLoggedIn.value;
   }
-
+ 
   public IsReloadTweet = new BehaviorSubject<boolean>(false);
   isReloadTweet = this.IsReloadTweet.asObservable();
 
@@ -51,6 +51,7 @@ export class UserService {
         'Content-Type': 'application/json',
          });
       let options = { headers: headers };  
+      let textss = "";
     const body = { userName: username, firstName: firstName , lastName: lastName,  phoneNumber: phoneNumber,password: password };
     return this._http.post('http://20.124.163.127/api/v1.0/tweets/register',body,options);
   }
